@@ -314,9 +314,15 @@
                                     <span className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">The Revenue Accelerator</span>
                                 </div>
                             </div>
-                            <div className="hidden md:flex items-center gap-8">
-                                <NavLink active={activeTab === 'dashboard'} onClick={() => setActiveTab('dashboard')} icon="layout-dashboard" label="Command Center" />
-                                <NavLink active={activeTab === 'roadmap'} onClick={() => setActiveTab('roadmap')} icon="map" label="Prompt Library" />
+                            <div className="hidden md:flex items-center gap-6">
+                                <NavLink active={activeTab === 'dashboard'} onClick={() => setActiveTab('dashboard')} icon="layout-dashboard" label="GTM Companion" />
+                                <button 
+                                    onClick={() => setActiveTab('roadmap')} 
+                                    className={`flex items-center gap-2 px-5 py-2 rounded-full text-sm font-black transition-all ${activeTab === 'roadmap' ? 'bg-[#E04F00] text-white shadow-md scale-105' : 'bg-[#FC5B05] text-black shadow-sm hover:-translate-y-0.5 hover:shadow-md'}`}
+                                >
+                                    <Lucide name="map" size={16} />
+                                    Prompt Library
+                                </button>
                                 <NavLink active={activeTab === 'playbook'} onClick={() => setActiveTab('playbook')} icon="calendar" label="Quarterly Plays" />
                             </div>
                         </div>
